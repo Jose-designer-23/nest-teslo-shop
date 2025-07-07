@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
@@ -29,3 +30,6 @@ http://localhost:3000/api/seed
 ```
 
 # Production notes:
+=======
+# nest-teslo-shop
+>>>>>>> 3ccaabe926cb36e7390d255aa3a47dd7b7cb9dca
