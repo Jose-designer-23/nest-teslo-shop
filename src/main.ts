@@ -18,8 +18,6 @@ async function bootstrap() {
     allowedHeaders: 'Content-Type, Accept, Authorization', 
   });
 
-  app.enableCors();
-
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
