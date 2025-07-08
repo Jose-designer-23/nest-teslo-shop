@@ -7,14 +7,15 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const logger = new Logger('Bootstrap');
+  const port = process.env.PORT || 3000;
 
   app.setGlobalPrefix('api');
 
    app.enableCors({
     origin: 'https://phoenix-angular-shop.netlify.app', // <--- ¡Importante! Reemplaza con la URL EXACTA de tu frontend de Netlify
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, // Esto es importante si usas cookies o tokens de autenticación
-    allowedHeaders: 'Content-Type, Accept, Authorization', // Esto también puede ser importante
+    credentials: true, 
+    allowedHeaders: 'Content-Type, Accept, Authorization', 
   });
 
   app.enableCors();
@@ -35,7 +36,7 @@ async function bootstrap() {
   SwaggerModule.setup('api', app, document);
 
 
-  const port = process.env.PORT || 3000;
+ 
 
   await app.listen(port, '0.0.0.0');
   logger.log(`App running on port ${ port}`);
