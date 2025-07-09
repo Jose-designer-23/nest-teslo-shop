@@ -12,7 +12,7 @@ async function bootstrap() {
   app.setGlobalPrefix('api');
 
    app.enableCors({
-    origin: 'https://phoenix-angular-shop.netlify.app', // <--- ¡Importante! Reemplaza con la URL EXACTA de tu frontend de Netlify
+    origin: ['http://localhost:4200', 'https://phoenix-angular-shop.netlify.app'], 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, 
     allowedHeaders: 'Content-Type, Accept, Authorization', 
